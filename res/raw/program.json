@@ -1,0 +1,59 @@
+{
+  "result": [
+    {
+      "start_time": "19:00",
+      "title": "Otevření Semilassa",
+      "subtitle": "račte vstoupit"
+    },
+    {
+      "start_time": "19:30",
+      "title": "Oficialní začátek",
+      "subtitle": "kapela hraje k poslechu"
+    },
+    {
+      "start_time": "19:45",
+      "title": "Zahájení plesu",
+      "subtitle": "projev děkana FI prof. Kozubka"
+    },
+    {
+      "start_time": "20:00",
+      "title": "První předtančení",
+      "subtitle": "standard"
+    },
+    {
+      "start_time": "20:50",
+      "title": "BAFNI",
+      "subtitle": ""
+    },
+    {
+      "start_time": "21:40",
+      "title": "Druhé předtančení",
+      "subtitle": "latina"
+    },
+    {
+      "start_time": "22:22",
+      "title": "Taneční soutěž",
+      "subtitle": "xxx"
+    },
+    {
+      "start_time": "23:15",
+      "title": "BAFNI",
+      "subtitle": "xxx"
+    },
+    {
+      "start_time": "00:00",
+      "title": "Slosování tomboly",
+      "subtitle": "xxx"
+    },
+    {
+      "start_time": "xx:xx",
+      "title": "xxx",
+      "subtitle": "xxx"
+    },
+    {
+      "start_time": "xx:xx",
+      "title": "Uzavření Semilassa",
+      "subtitle": "konečná stanice, prosíme, vystupte"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+    "result": [
+        {
+            "category": "Alko",
+            "items": [
+                {
+                    "title": "Točené pivo <small>(0,5 l)</small>",
+                    "subtitle": "",
+                    "price": "25"
+                }
+            ]
+        },
+        {
+            "category": "Drinky",
+            "items": [
+                {
+                    "title": "Spišská hruška <small>(0,04 l)</small>",
+                    "subtitle": "",
+                    "price": "40 <small>Kč</small>"
+                },
+                {
+                    "title": "Jagermeister <small>(0.04 l)</small>",
+                    "subtitle": "",
+                    "price": "40 <small>Kč</small>"
+                },
+                {
+                    "title": "Becherovka <small>(0,04 l)</small>",
+                    "subtitle": "",
+                    "price": "35 <small>Kč</small>"
+                },
+                {
+                    "title": "Fernet Stock <small>(0,04 l)</small>",
+                    "subtitle": "",
+                    "price": "35 <small>Kč</small>"
+                },
+                {
+                    "title": "Peppermint Božkov <small>(0,04 l)</small>",
+                    "subtitle": "",
+                    "price": "25 <small>Kč</small>"
+                },
+                {
+                    "title": "Rum Božkov <small>(0,04 l)</small>",
+                    "subtitle": "",
+                    "price": "25 <small>Kč</small>"
+                },
+                {
+                    "title": "Vodka Božkov <small>(0,04 l)</small>",
+                    "subtitle": "",
+                    "price": "25 <small>Kč</small>"
+                }
+            ]
+        },
+        {
+            "category": "Víno",
+            "items": [
+                {
+                    "title": "Víno červené rozlévané <small>(0,2 l)</small>",
+                    "subtitle": "",
+                    "price": "30 <small>Kč</small>"
+                },
+                {
+                    "title": "Víno bílé rozlévané <small>(0,2 l)</small>",
+                    "subtitle": "",
+                    "price": "30 <small>Kč</small>"
+                },
+                {
+                    "title": "Víno červené lahev <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "150 <small>Kč</small>"
+                },
+                {
+                    "title": "Víno bílé lahev <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "150 <small>Kč</small>"
+                },
+                {
+                    "title": "Lahvovaná voda jemně perlivá <small>(0,5 l)</small>",
+                    "subtitle": "",
+                    "price": "25"
+                },
+                {
+                    "title": "Lahvovaná voda neperlivá <small>(0,5 l)</small>",
+                    "subtitle": "",
+                    "price": "25"
+                },
+                {
+                    "title": "Čaj <small>(0,2 l)</small>",
+                    "subtitle": "",
+                    "price": "25 <small>Kč</small>"
+                },
+                {
+                    "title": "Káva <small>(0,2 l)</small>",
+                    "subtitle": "",
+                    "price": "25 <small>Kč</small>"
+                },
+                {
+                    "title": "Red Bull <small>(0,25 l)</small>",
+                    "subtitle": "",
+                    "price": "48"
+                },
+                {
+                    "title": "Pomerančový džus <small>(0,2 l)</small>",
+                    "subtitle": "",
+                    "price": "20 <small>Kč</small>"
+                },
+                {
+                    "title": "Rybízový džus <small>(0,2 l)</small>",
+                    "subtitle": "",
+                    "price": "20 <small>Kč</small>"
+                },
+                {
+                    "title": "Tonic <small>(0,25 l)</small>",
+                    "subtitle": "",
+                    "price": "20 <small>Kč</small>"
+                }
+            ]
+        },
+        {
+            "category": "talíře",
+            "items": [
+                {
+                    "title": "salámovo syrový tanier <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "70 <small>Kč</small>"
+                },
+                {
+                    "title": "syrovo ovocny tanier <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "65 <small>Kč</small>"
+                },
+                {
+                    "title": "bagetka <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": " <small>Kč</small>"
+                },
+                {
+                    "title": "chleba <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": " <small>Kč</small>"
+                }
+            ]
+        },
+        {
+            "category": "Ostatní",
+            "items": [
+                {
+                    "title": "toast <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": " <small>Kč</small>"
+                },
+                {
+                    "title": "koláčik <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "8 <small>Kč</small>"
+                },
+                {
+                    "title": "chipsy <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "35 <small>Kč</small>"
+                },
+                {
+                    "title": "tyčinky <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "20 <small>Kč</small>"
+                },
+                {
+                    "title": "pistacie <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "35 <small>Kč</small>"
+                },
+                {
+                    "title": "miska s olivami <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "20 <small>Kč</small>"
+                },
+                {
+                    "title": "obložený chlebíček <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "20 <small>Kč</small>"
+                },
+                {
+                    "title": "chleba se sádlem a zelenou cibulkou <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "18 <small>Kč</small>"
+                },
+                {
+                    "title": "arasidy <small>(0,7 l)</small>",
+                    "subtitle": "",
+                    "price": "25 <small>Kč</small>"
+                }
+            ]
+        }
+    ]
+}
