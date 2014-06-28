@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 'android-L'
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "cz.dnk.sufi.plessufi"
+        minSdkVersion 10
+        targetSdkVersion 'L'
+        versionCode 1
+        versionName "0.2"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    wearApp project(':wear')
+    //    compile 'com.google.android.gms:play-services-wearable:+'
+//    compile 'com.android.support:recyclerview-v7:21.0.0-rc1'
+    // You must install or update the Support Repository through the SDK manager to use this dependency.
+
+    // You must install or update the Support Repository through the SDK manager to use this dependency.
+    compile 'com.google.code.gson:gson:2.2.+'
+    // You must install or update the Support Repository through the SDK manager to use this dependency.
+    compile 'com.android.support:support-v4:20.+'
+    compile 'com.android.support:appcompat-v7:20.+'
+}
