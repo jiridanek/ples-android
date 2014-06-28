@@ -35,7 +35,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.TextView;
 
-public class KatalogActivity extends FragmentActivity {
+public class KatalogActivity extends ActionBarActivityWithDrawer {
 
     protected static List<Category> mCategories;
 
@@ -58,9 +58,6 @@ public class KatalogActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_katalog);
-
-        // Show the Up button in the action bar.
-        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         mCategories = new ArrayList<Category>();
         try {

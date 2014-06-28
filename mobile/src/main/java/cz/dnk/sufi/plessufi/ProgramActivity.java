@@ -1,7 +1,10 @@
 package cz.dnk.sufi.plessufi;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import cz.dnk.sufi.plessufi.R;
@@ -26,35 +29,18 @@ import android.widget.TextView;
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
 
-public class ProgramActivity extends ActionBarActivity {
+public class ProgramActivity extends ActionBarActivityWithDrawer {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_program);
-        // Show the Up button in the action bar.
-        setupActionBar();
-
-        ListView listView = (ListView) findViewById(R.id.listview);
-        InputStream data;
-        List<Event> events;
-        try {
-            data = getResources().openRawResource(R.raw.program);
-            events = eventListFromJSON(data);
-            listView.setAdapter(new MyListAdapter(this, events));
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+        setContentView(R.layout.activity_action_bar_with_drawer);
+        super.initializeDrawer((DrawerLayout) findViewById(R.id.drawer_layout));
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, new ProgramFragment())
+                    .commit();
         }
-    }
-
-    /**
-     * Set up the {@link android.app.ActionBar}.
-     */
-    private void setupActionBar() {
-
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-
     }
 
 
@@ -98,7 +84,77 @@ public class ProgramActivity extends ActionBarActivity {
         return events;
     }
 
-    private class Event {
+    public static class ProgramFragment extends Fragment {
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.activity_program, container, false);
+            ListView listView = (ListView) rootView.findViewById(R.id.listview);
+            InputStream data;
+            List<Event> events;
+            try {
+                data = getResources().openRawResource(R.raw.program);
+                events = eventListFromJSON(data);
+                listView.setAdapter(new MyListAdapter(getActivity(), events));
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            return rootView;
+        }
+
+        private class MyListAdapter extends BaseAdapter {
+
+            private Context mContext;
+            private List<Event> mArray;
+
+            public MyListAdapter(Context c, List<Event> e) {
+                mContext = c;
+                mArray = e;
+            }
+
+            @Override
+            public int getCount() {
+                // TODO Auto-generated method stub
+                return mArray.size();
+            }
+
+            @Override
+            public Object getItem(int arg0) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public long getItemId(int arg0) {
+                // TODO Auto-generated method stub
+                return arg0;
+            }
+
+            @Override
+            public View getView(int arg0, View arg1, ViewGroup arg2) {
+                View view;
+                if (arg1 == null) {
+                    view = View.inflate(mContext, R.layout.item_program, null);
+                } else {
+                    view = arg1;
+                }
+                final TextView timeView = (TextView) view.findViewById(R.id.block_time);
+                final TextView titleView = (TextView) view.findViewById(R.id.block_title);
+                final TextView subtitleView = (TextView) view.findViewById(R.id.block_subtitle);
+                //final ImageButton extraButton = (ImageButton) view.findViewById(R.id.extra_button);
+                //final View primaryTouchTargetView = view.findViewById(R.id.list_item_middle_container);
+                Event data = mArray.get(arg0);
+                timeView.setText(data.getStartTime());
+                titleView.setText(data.getTitle());
+                subtitleView.setText(data.getSubtitle());
+
+                return view;
+            }
+        }
+
+    }
+    private static class Event {
         private String start_time;
         private String title;
         private String subtitle;
@@ -116,56 +172,8 @@ public class ProgramActivity extends ActionBarActivity {
         }
 
     }
-
-    private class MyListAdapter extends BaseAdapter {
-
-        private Context mContext;
-        private List<Event> mArray;
-
-        public MyListAdapter(Context c, List<Event> e) {
-            mContext = c;
-            mArray = e;
-        }
-
-        @Override
-        public int getCount() {
-            // TODO Auto-generated method stub
-            return mArray.size();
-        }
-
-        @Override
-        public Object getItem(int arg0) {
-            // TODO Auto-generated method stub
-            return null;
-        }
-
-        @Override
-        public long getItemId(int arg0) {
-            // TODO Auto-generated method stub
-            return arg0;
-        }
-
-        @Override
-        public View getView(int arg0, View arg1, ViewGroup arg2) {
-            View view;
-            if (arg1 == null) {
-                view = View.inflate(mContext, R.layout.item_program, null);
-            } else {
-                view = arg1;
-            }
-            final TextView timeView = (TextView) view.findViewById(R.id.block_time);
-            final TextView titleView = (TextView) view.findViewById(R.id.block_title);
-            final TextView subtitleView = (TextView) view.findViewById(R.id.block_subtitle);
-            //final ImageButton extraButton = (ImageButton) view.findViewById(R.id.extra_button);
-            //final View primaryTouchTargetView = view.findViewById(R.id.list_item_middle_container);
-            Event data = mArray.get(arg0);
-            timeView.setText(data.getStartTime());
-            titleView.setText(data.getTitle());
-            subtitleView.setText(data.getSubtitle());
-
-            return view;
-        }
-    }
 }
+
+
 
 
